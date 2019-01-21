@@ -1,6 +1,8 @@
 # About
 This project allows a photographer to back up their memory cards to another storage medium using a Raspberry Pi, and a USB hub. This is a very travel friendly option to guard against data loss in the case of a failed SD Card or a stolen camera. Since the power requirements are very meager, it can even be powered off of a power bank. It's also quite inexpensive, compact & lightweight compared to the few highly-specialized devices that do the same thing. The only drawback is speed -- 100 GB takes around 4 hours. The intended usage is to run the backup at the end of each day.
 
+![The backupX system is about the size of a pack of cards](https://github.com/mikeyroy/backupX/blob/gh-pages/DSC06504.jpg)
+
 The copy process uses rsync, and will only copy new files since the last backup. When the copy process is finished, the unit will shutdown. The script will read the label of the source storage and create a folder with the label as the name on the backup drive, so if you are backing up from multiple sources to a single backup the files will go into their respective folders so long as the drive labels of your source drives are unique. If you are backing up from multiple sources, just power cycle the Pi to start a new copy session.
 
 An LED + a resistor can be added to the GPIO pin 13 and a ground pin for a visual indication of activity; solid: waiting for USB devices, flashing: copying. To simplify adding it to the board and minimize space, an [Adafruit LED sequin](https://amzn.to/2RGKzjR) combines both into a single chip. Without the addition of this LED, you have to go off of the Pi's green power LED to know when the backup has completed, and the Pi has shut off.
