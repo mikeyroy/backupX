@@ -4,6 +4,23 @@ if [ "$EUID" -ne 0 ]
 	exit
 fi
 
+if command -v python3 &>/dev/null; then
+    echo "Python 3 is installed"
+else
+    echo "Python 3 is not installed, please install before continuing."
+fi
+
+cp backupX.service /lib/systemd/system/backupX.service
+sed -i -e 's?%pwd%?'`pwd`'?' /lib/systemd/system/backupX.service
+
 sudo systemctl daemon-reload
-sudo systemctl enable backupx.service
-sudo reboot
+
+if [ $? -ne 0 ]; then
+	exit
+fi
+
+sudo systemctl enable backupX.service
+
+if [ $? -eq 0 ]; then
+	sudo reboot
+fi

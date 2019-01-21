@@ -4,4 +4,4 @@ if [ "$EUID" -ne 0 ]
 	exit
 fi
 
-sudo systemctl status backupx.service
+sudo systemctl status backupX.service

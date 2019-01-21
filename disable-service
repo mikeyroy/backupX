@@ -5,5 +5,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 sudo systemctl daemon-reload
-sudo systemctl disable backupx.service
-sudo reboot
+sudo systemctl disable backupX.service
+if [ $? -eq 0 ]; then
+	sudo reboot
+fi
