@@ -10,6 +10,10 @@ else
     echo "Python 3 is not installed, please install before continuing."
 fi
 
+apt-get update
+apt-get install exfat-fuse exfat-utils
+mkdir /media/exfat
+
 cp backupX.service /lib/systemd/system/backupX.service
 sed -i -e 's?%pwd%?'`pwd`'?' /lib/systemd/system/backupX.service
 
