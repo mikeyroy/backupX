@@ -11,7 +11,7 @@ else
 fi
 
 apt-get update
-apt-get install exfat-fuse exfat-utils -y
+apt-get install exfat-fuse exfat-utils ntfs-3g -y
 mkdir /media/exfat
 
 cp backupX.service /lib/systemd/system/backupX.service
