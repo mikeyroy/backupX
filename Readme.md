@@ -24,7 +24,8 @@ When complete, the Pi will reboot, when it comes back up, go back into the backu
 Plug your source and backup drives into the USB hub and verify that the Pi can mount them. If you get an error mounting a specific filesystem, you can likely install a package to mount it. Please raise an issue if you encounter this.
 
 # Usage
- - Your backup medium must have a label of `backupX` for it to be recognized as the target
+ - Your backup medium must have a label of `backupX` (case insensitive) for it to be recognized as the target
+ - The backup medium has been tested with Exfat & NTFS (if your preferred drive format doesn't work, file an issue or fork & contribute)
  - Boot the Pi and plug the source and backup storage into the USB hub. The program will wait for both to be plugged in before starting the copy process
  - When the copy process is finished, the Pi will shut down
  - If the backup is interrupted, just power cycle the Pi to continue the copy process
