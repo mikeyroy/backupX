@@ -8,7 +8,7 @@ import threading
 import queue
 
 MOUNTPOINT = '/media/pi/'
-BACKUP_DEST_NAME = 'backupX'
+BACKUP_DEST_NAME = 'backupx'
 LED_GPIO = 13
 
 ledRate = queue.Queue()
@@ -100,7 +100,7 @@ def main():
             if child:
                 mountpoint = child['mountpoint']
                 if (mountpoint and mountpoint.find(MOUNTPOINT) == 0):
-                    if child['label'] == BACKUP_DEST_NAME:
+                    if child['label'] and child['label'].lower() == BACKUP_DEST_NAME:
                         dest = child
                     else:
                         src = child
