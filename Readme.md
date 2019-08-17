@@ -7,7 +7,17 @@ The copy process uses rsync, and will only copy new files since the last backup.
 
 An LED + a resistor can be added to the GPIO pin 13 and a ground pin for a visual indication of activity; solid: waiting for USB devices, flashing: copying. To simplify adding it to the board and minimize space, an [Adafruit LED sequin](https://amzn.to/2RGKzjR) combines both into a single chip. Without the addition of this LED, you have to go off of the Pi's green power LED to know when the backup has completed, and the Pi has shut off.
 
-This project has been tested with [Raspberry Pi Zero+](https://amzn.to/2FL7yTT) and [Raspbian with Desktop & Recommended Software](https://www.raspberrypi.org/downloads/raspbian/). The [Vilros Raspberry Pi Kit](https://amzn.to/2FL7yTT) comes with everything you need including the hub. My preferred backup target is a [256 GB USB stick](https://amzn.to/2U8yqkL) and a USB SD card reader with the SD card from the camera is the source.
+This project has been tested with [Raspberry Pi 4](https://amzn.to/31JsHp9) and the [Raspberry Pi Zero+](https://amzn.to/2FL7yTT) and [Raspbian with Desktop & Recommended Software](https://www.raspberrypi.org/downloads/raspbian/). The [Vilros Raspberry Pi Zero W Kit](https://amzn.to/2FL7yTT) comes with everything you need including the hub. My preferred backup target is a [256 GB USB stick](https://amzn.to/2U8yqkL) and a USB SD card reader with the SD card from the camera is the source.
+
+# Pi 4 vs Pi Zero W
+## Speed
+In tests of various SD cards and transferring 100GB of image files, the Pi 4 achieved average backup speeds of 1GB/minute while the Pi Zero W is 4x slower.
+## Power Requirements
+The Pi 4 requires a dedicated power supply, or a battery that can supply 15W/3A through a USB-C connection. The Pi Zero W can be powered from pretty much anything with a micro-USB cable.
+## Size & Weight
+The Pi 4 is bigger & heavier, especially when it is in a case, and the Pi 4 has an additional power adapter increasing size & weight even more but while the Pi Zero W is more compact, it requires a USB dongle for the backup targets to it. 
+## Overall
+The Pi 4 is much faster in processing capability and data transfer speeds and finally feels like a real, usable computing option. If you need the faster transfer speeds, and want to use the Pi 4 as an ultra-portable computer, by all means get that. If you are looking to minimize size and weight in a backup solution, and can manage with the slower transfer speeds, the Pi Zero W is definitely the way to go.
 
 # Installation
  - Install Raspbian Full to a new SD Card (Noobs may work, it is untested)
