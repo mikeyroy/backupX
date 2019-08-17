@@ -6,6 +6,10 @@ fi
 
 sudo systemctl daemon-reload
 sudo systemctl disable backupX.service
+
+sudo sed -i 's/hdmi_force_hotplug=1/#hdmi_force_hotplug=1/' /boot/config.txt
+
 if [ $? -eq 0 ]; then
 	sudo reboot
 fi
+
