@@ -19,6 +19,9 @@ The Pi 4 is bigger & heavier, especially when it is in a case, and the Pi 4 has 
 ## Overall
 The Pi 4 is much faster in processing capability and data transfer speeds and finally feels like a real, usable computing option. If you need the faster transfer speeds, and want to use the Pi 4 as an ultra-portable computer, by all means get that. If you are looking to minimize size and weight in a backup solution, and can manage with the slower transfer speeds, the Pi Zero W is definitely the way to go.
 
+![Raspberry Pi 4 is in the top half with its power adapter, Raspberry Pi Zero W is in the lower half with its USB dongle.](https://github.com/mikeyroy/backupX/blob/gh-pages/backupx-comparing-raspberry-pi-4-to-the-raspberry-pi-zero-w.jpg)
+Raspberry Pi 4 is in the top half with its power adapter, Raspberry Pi Zero W is in the lower half with its USB dongle.
+
 # Installation
  - Install Raspbian Full to a new SD Card (Noobs may work, it is untested)
  - Boot the Raspberry Pi and go through the guided setup, the only important thing is to set up wifi 
