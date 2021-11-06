@@ -7,17 +7,29 @@ The copy process uses rsync, and will only copy new files since the last backup.
 
 An LED + a resistor can be added to the GPIO pin 13 and a ground pin for a visual indication of activity; solid: waiting for USB devices, flashing: copying. To simplify adding it to the board and minimize space, an [Adafruit LED sequin](https://amzn.to/2RGKzjR) combines both into a single chip. Without the addition of this LED, you have to go off of the Pi's power LED to know when the backup has completed, and the Pi has shut off.
 
-This project has been tested with [Raspberry Pi 4](https://amzn.to/31JsHp9) and the [Raspberry Pi Zero+](https://amzn.to/2FL7yTT) and [Raspbian with Desktop & Recommended Software](https://www.raspberrypi.org/downloads/raspbian/). The [Vilros Raspberry Pi Zero W Kit](https://amzn.to/2FL7yTT) comes with everything you need including the hub. My preferred backup target is a [256 GB USB stick](https://amzn.to/2U8yqkL) and a USB SD card reader with the SD card from the camera is the source.
+This project has been tested with the [Raspberry Pi Zero W 2](https://amzn.to/3woxlJC), the [Raspberry Pi 4](https://amzn.to/31JsHp9) and the [Raspberry Pi Zero+](https://amzn.to/2FL7yTT) and [Raspbian with Desktop & Recommended Software](https://www.raspberrypi.org/downloads/raspbian/). My preferred backup target is a [256 GB USB stick](https://amzn.to/2U8yqkL) and a USB SD card reader with the SD card from the camera is the source.
 
-# Pi 4 vs Pi Zero W
-## Speed
-In tests of various SD cards and transferring 100GB of image files, the Pi 4 achieved average backup speeds of 1GB/minute while the Pi Zero W is 2.5x slower (~4 hours per 100GB).
+# Pi 4 vs Pi Zero W vs Pi Zero W 2
+## Speed to Transfer 100GB
+
+| | Pi 4 | Pi Zero W | Pi Zero W 2 |
+| --- | --- | --- | --- |
+| Total Duration | 1h 40m |4h 10m | 2h 34m |
+| GB/min | 1 | 0.4 | 0.65 |
+
+In tests of various SD cards and transferring 100GB of image files, the Pi 4 achieved average backup speeds of 1GB/minute while the Pi Zero W is 2.5x slower (~4 hours per 100GB) and the Pi Zero W 2 is appreciably faster than the original Zero W but .
+
 ## Power Requirements
-The Pi 4 requires a dedicated power supply, or a battery that can supply 15W/3A through a USB-C connection. The Pi Zero W can be powered from pretty much anything with a micro-USB cable.
+
+The Pi 4 requires a dedicated power supply, or a battery that can supply 15W/3A through a USB-C connection. The Pi Zero W and the Pi Zero W 2 can be powered from pretty much anything with a micro-USB cable, though officially the Pi Zero W 2 recommends a dedicated wall adapter when using peripherals, I have found it unnecessary for the purposes of backupX.
+
 ## Size & Weight
-The Pi 4 is bigger & heavier, especially when it is in a case, and the Pi 4 has an additional power adapter increasing size & weight even more but while the Pi Zero W is more compact, it requires a USB dongle for the backup targets to it.
+
+The Pi 4 is bigger & heavier, especially when it is in a case, and the Pi 4 has an additional power adapter increasing size & weight even more but while the Pi Zero W & Pi Zero W 2 are more compact and identical footprints, they require a USB dongle for the backup targets.
+
 ## Overall
-The Pi 4 is much faster in processing capability and data transfer speeds and feels like a real, usable computing option, while if you were to use the Pi Zero W for any computing, even just web browsing, it is painfully slow. If you need the faster transfer speeds, and want to use the Pi 4 as an ultra-portable computer, or don't mind a bulkier backup option, by all means get that. If you are looking to minimize size and weight in a backup solution, and can manage with the slower transfer speeds, the Pi Zero W is definitely the way to go.
+
+The Pi 4 is much faster in processing capability and data transfer speeds and feels like a real, usable computing option, while if you were to use the Pi Zero W (and the W 2 for that matter) for any computing, even just web browsing, it is painfully slow, even with the quad CPU the Pi Zero W 2 is difficult to use for web browsing, coding or the like. If you need the faster transfer speeds, and want to use the Pi 4 as an ultra-portable computer, or don't mind a bulkier backup option, by all means get that. If you are looking to minimize size and weight in a backup solution, and can manage with the slower transfer speeds, the Pi Zero W 2 is definitely the way to go, but if you have a Pi Zero W to spare, it's still worth it.
 
 ![Raspberry Pi 4 is in the top half with its power adapter, Raspberry Pi Zero W is in the lower half with its USB dongle.](https://github.com/mikeyroy/backupX/blob/gh-pages/backupx-comparing-raspberry-pi-4-to-the-raspberry-pi-zero-w.jpg)
 Raspberry Pi 4 is in the top half with its power adapter, Raspberry Pi Zero W is in the lower half with its USB dongle.
